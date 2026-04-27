@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Artisan Lokal - Premium Quality</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['"Playfair Display"', 'serif'], // Font premium
+                    },
+                    colors: {
+                        brand: {
+                            gold: '#d97706', // Amber 600 - Warna emas elegan
+                            light: '#fdfbf7', // Putih tulang / broken white untuk background
+                            dark: '#111827', // Gray 900 - Hitam arang
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-light text-brand-dark font-sans antialiased overflow-x-hidden">
+
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-500 py-6">
+        <nav class="container mx-auto px-6 md:px-12 flex justify-between items-center max-w-7xl">
+            <a href="#" class="text-3xl font-heading font-bold text-white tracking-wide z-50 transition-colors duration-300" id="nav-logo">
+                Artisan<span class="text-brand-gold">.</span>
+            </a>
+
+            <ul class="hidden md:flex space-x-10 text-sm tracking-widest uppercase font-medium text-white transition-colors duration-300" id="nav-links">
+                <li><a href="#home" class="hover:text-brand-gold transition-colors">Beranda</a></li>
+                <li><a href="#about" class="hover:text-brand-gold transition-colors">Filosofi</a></li>
+                <li><a href="#menu" class="hover:text-brand-gold transition-colors">Menu</a></li>
+                <li><a href="#location" class="hover:text-brand-gold transition-colors">Lokasi</a></li>
+            </ul>
+
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-white z-50 focus:outline-none transition-colors duration-300">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-brand-dark z-40 flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300">
+            <ul class="flex flex-col space-y-8 text-center text-2xl font-heading font-bold text-white">
+                <li><a href="#home" class="mobile-link hover:text-brand-gold transition-colors">Beranda</a></li>
+                <li><a href="#about" class="mobile-link hover:text-brand-gold transition-colors">Filosofi</a></li>
+                <li><a href="#menu" class="mobile-link hover:text-brand-gold transition-colors">Menu</a></li>
+                <li><a href="#location" class="mobile-link hover:text-brand-gold transition-colors">Lokasi</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="relative min-h-screen flex items-center justify-center bg-brand-dark pt-20 overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-transparent"></div>
+
+            <div class="container mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-12 max-w-7xl animate-on-scroll">
+                <div class="w-full md:w-1/2 text-center md:text-left mt-10 md:mt-0">
+                    <p class="text-brand-gold tracking-[0.2em] uppercase text-sm mb-4 font-medium">Kualitas Tanpa Kompromi</p>
+                    <h1 class="text-5xl md:text-7xl font-heading font-bold text-white leading-[1.1] mb-6">
+                        Seni Meracik<br>
+                        <span class="italic font-light">Burger Premium.</span>
+                    </h1>
+                    <p class="text-gray-300 text-lg mb-10 max-w-md mx-auto md:mx-0 font-light leading-relaxed">
+                        Perpaduan daging Wagyu pilihan dan roti brioche panggang harian. Sebuah mahakarya gastronomi lokal untuk lidah yang mendamba kesempurnaan.
+                    </p>
+                    <a href="https://wa.me/6281234567890" target="_blank" class="inline-flex items-center gap-3 border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-white px-8 py-4 uppercase tracking-widest text-sm transition-all duration-300">
+                        Reservasi Pesanan <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="w-full md:w-1/2 relative flex justify-center mt-10 md:mt-0">
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-brand-gold rounded-full mix-blend-screen filter blur-[100px] opacity-30"></div>
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1000&auto=format&fit=crop" alt="Premium Artisan Burger" class="relative z-10 w-full max-w-[400px] object-cover drop-shadow-2xl rounded-t-[10rem] border-b-4 border-brand-gold floating-element">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 bg-brand-light">
+            <div class="container mx-auto px-6 max-w-5xl text-center animate-on-scroll">
+                <i class="fa-solid fa-quote-right text-4xl text-brand-gold/30 mb-6"></i>
+                <h2 class="text-4xl md:text-5xl font-heading font-bold mb-8 text-brand-dark">Dedikasi Pada Rasa</h2>
+                <p class="text-gray-600 text-lg md:text-xl leading-relaxed mb-16 font-light max-w-3xl mx-auto">
+                    Kami tidak membuat makanan cepat saji. Kami meracik pengalaman. Setiap bahan dipilih dengan teliti, dari petani lokal terbaik, diproses dengan teknik memasak tingkat tinggi untuk menghasilkan harmoni rasa dalam setiap gigitan.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-gray-200 pt-16">
+                    <div class="flex flex-col items-center group">
+                        <div class="w-16 h-16 border border-brand-gold rounded-full flex items-center justify-center text-brand-gold text-2xl mb-6 group-hover:bg-brand-gold group-hover:text-white transition-colors duration-500">
+                            <i class="fa-solid fa-fire-burner"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl mb-3">Wood-Fired Grill</h3>
+                        <p class="text-gray-500 text-sm font-light">Aroma *smokey* autentik dari kayu rambutan pilihan.</p>
+                    </div>
+                    <div class="flex flex-col items-center group">
+                        <div class="w-16 h-16 border border-brand-gold rounded-full flex items-center justify-center text-brand-gold text-2xl mb-6 group-hover:bg-brand-gold group-hover:text-white transition-colors duration-500">
+                            <i class="fa-solid fa-wheat-awn"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl mb-3">Artisan Brioche</h3>
+                        <p class="text-gray-500 text-sm font-light">Roti yang diistirahatkan 24 jam untuk tekstur selembut sutra.</p>
+                    </div>
+                    <div class="flex flex-col items-center group">
+                        <div class="w-16 h-16 border border-brand-gold rounded-full flex items-center justify-center text-brand-gold text-2xl mb-6 group-hover:bg-brand-gold group-hover:text-white transition-colors duration-500">
+                            <i class="fa-solid fa-medal"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl mb-3">Wagyu Blend</h3>
+                        <p class="text-gray-500 text-sm font-light">Potongan daging premium dengan rasio lemak sempurna.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <div class="text-center mb-16 animate-on-scroll">
+                    <p class="text-brand-gold tracking-[0.2em] uppercase text-sm mb-2">Koleksi Kami</p>
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold text-brand-dark">Signature Menu</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <article class="group cursor-pointer animate-on-scroll">
+                        <div class="overflow-hidden mb-6 relative">
+                            <img src="https://images.unsplash.com/photo-1586816001966-79b736744398?q=80&w=800&auto=format&fit=crop" alt="The Classic" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                                <a href="https://wa.me/6281234567890" target="_blank" class="border border-white text-white px-6 py-2 uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-colors">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-heading font-bold text-2xl mb-2 group-hover:text-brand-gold transition-colors">The Classic Gold</h3>
+                                <p class="text-gray-500 font-light text-sm max-w-[250px]">Single wagyu patty, truffle mayo, aged cheddar.</p>
+                            </div>
+                            <span class="font-heading text-xl text-brand-gold">Rp 65k</span>
+                        </div>
+                    </article>
+
+                    <article class="group cursor-pointer animate-on-scroll" style="transition-delay: 100ms;">
+                        <div class="overflow-hidden mb-6 relative">
+                            <img src="https://images.unsplash.com/photo-1594212202875-86ac51fef481?q=80&w=800&auto=format&fit=crop" alt="Double Truffle" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                                <a href="https://wa.me/6281234567890" target="_blank" class="border border-white text-white px-6 py-2 uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-colors">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-heading font-bold text-2xl mb-2 group-hover:text-brand-gold transition-colors">Double Truffle</h3>
+                                <p class="text-gray-500 font-light text-sm max-w-[250px]">Double patty, caramelized onion, taburan daun thyme.</p>
+                            </div>
+                            <span class="font-heading text-xl text-brand-gold">Rp 95k</span>
+                        </div>
+                    </article>
+
+                    <article class="group cursor-pointer animate-on-scroll" style="transition-delay: 200ms;">
+                        <div class="overflow-hidden mb-6 relative">
+                            <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?q=80&w=800&auto=format&fit=crop" alt="Smoked Brisket" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                                <a href="https://wa.me/6281234567890" target="_blank" class="border border-white text-white px-6 py-2 uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-colors">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-heading font-bold text-2xl mb-2 group-hover:text-brand-gold transition-colors">Smoked Brisket</h3>
+                                <p class="text-gray-500 font-light text-sm max-w-[250px]">Irisan brisket asap 12 jam, saus BBQ hickory, red onion.</p>
+                            </div>
+                            <span class="font-heading text-xl text-brand-gold">Rp 85k</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-brand-dark text-white text-center">
+            <div class="container mx-auto px-6 max-w-3xl animate-on-scroll">
+                <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6">Rasakan Bedanya Hari Ini</h2>
+                <p class="text-gray-400 font-light mb-10">Stok harian kami sangat terbatas untuk menjaga kualitas tertinggi.</p>
+                <a href="https://wa.me/6281234567890" target="_blank" class="bg-brand-gold text-brand-dark px-10 py-4 font-semibold uppercase tracking-widest text-sm hover:bg-white transition-colors duration-300">
+                    Hubungi via WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="location" class="bg-brand-light py-16 border-t border-gray-200">
+        <div class="container mx-auto px-6 max-w-7xl flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <a href="#" class="text-3xl font-heading font-bold text-brand-dark">Artisan<span class="text-brand-gold">.</span></a>
+                <p class="text-gray-500 font-light mt-4 text-sm max-w-sm">
+                    Jl. Senopati No. 88, Jakarta Selatan.<br>
+                    Selasa - Minggu | 11.00 - 22.00
+                </p>
+            </div>
+            
+            <div class="flex gap-6">
+                <a href="#" class="text-gray-400 hover:text-brand-gold transition-colors text-xl"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-brand-gold transition-colors text-xl"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" class="text-gray-400 hover:text-brand-gold transition-colors text-xl"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 max-w-7xl mt-12 text-center border-t border-gray-200 pt-8">
+            <p class="text-gray-400 text-xs tracking-widest uppercase font-light">&copy; 2023 Burger Artisan Lokal. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+</body>
+</html>
