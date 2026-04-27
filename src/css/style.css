@@ -1,0 +1,33 @@
+/* Custom CSS - style.css */
+
+/* Scrollbar Elegan */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #111827; /* Hitam Arang */
+}
+::-webkit-scrollbar-thumb {
+    background: #d97706; /* Emas */
+}
+
+/* Animasi mengambang untuk gambar Hero */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+.floating-element {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Base class untuk scroll animation via JS */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
